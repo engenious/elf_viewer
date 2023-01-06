@@ -31,8 +31,9 @@
 *.out
 *.app
 
-# Build Dirs
+# Build Dirs and associated files
 cmake-build-*
+cmake/conan.lock
 
 # IDE specific files
 .idea
