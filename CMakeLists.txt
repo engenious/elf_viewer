@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(
     elf_viewer
-    main.cpp
+    src/main.cpp
     ${VERSION_INFO_PATH}
 )
 
