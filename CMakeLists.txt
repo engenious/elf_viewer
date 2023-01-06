@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 
 project(elf_viewer CXX)
 
+include(cmake/conanSetup.cmake)
+
 set(CMAKE_VERBOSE_MAKEFILE on)
 
 set(CMAKE_CXX_FLAGS "-g -Wall -Werror -Wno-attributes")
