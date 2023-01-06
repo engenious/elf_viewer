@@ -1,0 +1,38 @@
+//
+// SPDX-License-Identifier: MIT
+// Copyright (c) Contributors to the elf_viewer Project.
+//
+
+#include "VersionInfo.h"
+
+namespace elfviewer
+{
+
+const std::string_view& getGitHash()
+{
+    constexpr static const std::string_view cGitHash = "@elf_viewer_GIT_HASH@";
+    return cGitHash;
+}
+
+const std::string_view& getFullVersion()
+{
+    constexpr static const std::string_view cVersion = "@elf_viewer_VERSION@";
+    return cVersion;
+}
+
+unsigned getMajorVersion()
+{
+    return @elf_viewer_VERSION_MAJOR@U;
+}
+
+unsigned getMinorVersion()
+{
+    return @elf_viewer_VERSION_MINOR@U;
+}
+
+unsigned getPatchVersion()
+{
+    return @elf_viewer_VERSION_PATCH@U;
+}
+
+} // namespace elfviewer
