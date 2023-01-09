@@ -4,8 +4,13 @@ set( CMAKE_VERBOSE_MAKEFILE on )
 include( cmake/projectVersionDetails.cmake )
 project( elf_viewer VERSION ${elf_viewer_BUILD_VERSION} LANGUAGES CXX )
 
-include( cmake/conanSetup.cmake )
 include( cmake/versionInfo.cmake )
+
+set_property(
+    DIRECTORY
+    APPEND
+    PROPERTY CMAKE_CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/vcpkg.json
+)
 
 set(CMAKE_CXX_FLAGS "-g -Wall -Werror -Wno-attributes")
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -ggdb3")
