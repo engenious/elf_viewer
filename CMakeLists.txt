@@ -12,10 +12,10 @@ set_property(
     PROPERTY CMAKE_CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/vcpkg.json
 )
 
-set(CMAKE_CXX_FLAGS "-g -Wall -Werror -Wno-attributes")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -ggdb3")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
-set(CMAKE_CXX_STANDARD 23)
+set( CMAKE_CXX_FLAGS "-g -Wall -Werror -Wno-attributes" )
+set( CMAKE_CXX_FLAGS_DEBUG "-O0 -g -ggdb3" )
+set( CMAKE_CXX_FLAGS_RELEASE "-O3" )
+set( CMAKE_CXX_STANDARD 23 )
 
 add_executable(
     elf_viewer
@@ -25,5 +25,6 @@ add_executable(
 
 target_include_directories(
     elf_viewer
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
 )

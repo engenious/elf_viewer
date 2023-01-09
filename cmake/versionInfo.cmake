@@ -26,6 +26,6 @@ if( GIT_RESULT )
     message( FATAL_ERROR "Failed to get git hash (error code: ${GIT_RESULT})" )
 endif()
 
-set(VERSION_INFO_FILENAME VersionInfo.cpp CACHE FILEPATH "Filepath for build time version")
+set( VERSION_INFO_FILENAME VersionInfo.cpp CACHE FILEPATH "Filepath for build time version" )
 configure_file( src/VersionInfo.cpp.in ${VERSION_INFO_FILENAME} @ONLY )
-set(VERSION_INFO_PATH "${CMAKE_CURRENT_BINARY_DIR}/${VERSION_INFO_FILENAME}")
+set( VERSION_INFO_PATH "${CMAKE_CURRENT_BINARY_DIR}/${VERSION_INFO_FILENAME}" )
