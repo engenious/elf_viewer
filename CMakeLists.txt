@@ -17,13 +17,18 @@ set( CMAKE_CXX_FLAGS_DEBUG "-O0 -g -ggdb3" )
 set( CMAKE_CXX_FLAGS_RELEASE "-O3" )
 set( CMAKE_CXX_STANDARD 23 )
 
+find_package( cxxopts CONFIG REQUIRED )
+
 add_executable(
     elf_viewer
     src/main.cpp
-    ${APPLICATION_INFO_PATH})
+    ${APPLICATION_INFO_PATH}
+    src/ProgramArgs.cpp)
 
 target_include_directories(
     elf_viewer
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
+
+target_link_libraries( elf_viewer PRIVATE cxxopts::cxxopts )
