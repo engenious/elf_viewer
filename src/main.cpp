@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <iostream>
 
+#include <fmt/format.h>
+
 #include "ApplicationInfo.h"
 #include "ProgramArgs.h"
 
@@ -25,7 +27,7 @@ int main( int i_argc, const char** i_argv )
 
     if ( args.m_showVersion )
     {
-        std::cout << elfviewer::getApplicationName() << " version " << elfviewer::getFullVersion() << std::endl;
+        fmt::print( "{} version {}", elfviewer::getApplicationName(), elfviewer::getFullVersion() );
         return EXIT_SUCCESS;
     }
 

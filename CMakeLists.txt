@@ -18,6 +18,7 @@ set( CMAKE_CXX_FLAGS_RELEASE "-O3" )
 set( CMAKE_CXX_STANDARD 23 )
 
 find_package( cxxopts CONFIG REQUIRED )
+find_package( fmt CONFIG REQUIRED )
 
 add_executable(
     elf_viewer
@@ -31,4 +32,4 @@ target_include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-target_link_libraries( elf_viewer PRIVATE cxxopts::cxxopts )
+target_link_libraries( elf_viewer PRIVATE cxxopts::cxxopts fmt::fmt )
