@@ -4,7 +4,7 @@ set( CMAKE_VERBOSE_MAKEFILE on )
 include( cmake/projectVersionDetails.cmake )
 project( elf_viewer VERSION ${elf_viewer_BUILD_VERSION} LANGUAGES CXX )
 
-include( cmake/versionInfo.cmake )
+include( cmake/applicationInfo.cmake )
 
 set_property(
     DIRECTORY
@@ -20,8 +20,7 @@ set( CMAKE_CXX_STANDARD 23 )
 add_executable(
     elf_viewer
     src/main.cpp
-    ${VERSION_INFO_PATH}
-)
+    ${APPLICATION_INFO_PATH})
 
 target_include_directories(
     elf_viewer

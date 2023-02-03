@@ -5,7 +5,7 @@
 
 #include <cstdlib>
 
-#include "VersionInfo.h"
+#include "ApplicationInfo.h"
 
 int main( int i_argc, const char** i_argv )
 {

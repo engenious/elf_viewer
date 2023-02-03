@@ -13,6 +13,24 @@ namespace elfviewer
 // This file is inspired by the book "Professional CMake: A Practical Guide" by Craig Scott. See
 // https://crascit.com/professional-cmake/
 
+/// The name of the application.
+/// This uses a string view, and is ideal for zero copy access to the value.
+///
+const std::string_view&     getApplicationName();
+
+/// The name of the application as a string.
+///
+const std::string&          getApplicationNameString();
+
+/// A brief description of the application.
+/// This uses a string view, and is ideal for zero copy read only access to the value.
+///
+const std::string_view&     getApplicationDescription();
+
+/// A brief description of the application as a string.
+///
+const std::string&          getApplicationDescriptionString();
+
 /// The hash of the git commit used when building.
 ///
 const std::string_view&     getGitHash();
